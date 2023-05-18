@@ -1,0 +1,1 @@
+# The test I choose was the _backend_ one, I used this folder purely for testing Vue and Nuxt, and to see if I have the time to attempt the front-end task, which at the time of writing this might not be the case.
