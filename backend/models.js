@@ -5,7 +5,7 @@ const sequelize = new Sequelize({
   dialect: "postgres",
   database: "constelDB",
   username: "postgres",
-  password: "DuCompte1",
+  password: process.env.POSTGRES_PASSWD,
 });
 
 const Student = sequelize.define("student", {
