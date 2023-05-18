@@ -9,11 +9,19 @@ const sequelize = new Sequelize({
 });
 
 const Student = sequelize.define("student", {
-  idStudent: DataTypes.INTEGER,
+  idstudent: {
+    type: DataTypes.INTEGER,
+    autoIncrement: true,
+    primaryKey: true,
+  },
 });
 
 const Mentor = sequelize.define("mentor", {
-  idMentor: DataTypes.INTEGER,
+  idmentor: {
+    type: DataTypes.INTEGER,
+    autoIncrement: true,
+    primaryKey: true,
+  },
 });
 
 const Star = sequelize.define(

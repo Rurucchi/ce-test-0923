@@ -4,6 +4,8 @@ const router = express.Router();
 // schemes
 const { Star } = require("./models");
 
+//    /!\ EVERY REQUEST HERE MUST HAVE BOTH USERS EXIST.
+
 router.post("/add", async (req, res) => {
   try {
     const mentorQuery = req.body.idMentor;
@@ -16,7 +18,7 @@ router.post("/add", async (req, res) => {
       res.status(200).send();
     } catch (error) {
       console.log(error);
-      res.status(500).send();
+      res.status(404).send();
     }
     res.status(200).send();
   } catch (error) {
@@ -36,7 +38,7 @@ router.delete("/remove", async (req, res) => {
       res.status(200).send();
     } catch (error) {
       console.log(error);
-      res.status(500).send();
+      res.status(404).send();
     }
     res.status(200).send();
   } catch (error) {
