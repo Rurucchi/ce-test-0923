@@ -8,4 +8,5 @@ const Student = sequelize.define("Student", {
 
 const Mentor = sequelize.define("Mentor", {
   idMentor: DataTypes.NUMBER,
+  stars: DataTypes.NUMBER,
 });
