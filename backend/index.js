@@ -1,4 +1,4 @@
-// packages needed
+// packages needed for express
 const express = require("express");
 const app = express();
 const port = 4000;
@@ -6,6 +6,10 @@ const cors = require("cors");
 
 // routes
 const starRouter = require("./star");
+
+// express default params
+app.use(express.json());
+app.use(cors());
 
 // middleware logs in console
 app.use((req, res, next) => {
@@ -20,3 +24,5 @@ app.use("/star", starRouter, cors());
 app.listen(port, () => {
   console.log(`App listening on port ${port}!`);
 });
+
+// module.exports = { sequelize };
